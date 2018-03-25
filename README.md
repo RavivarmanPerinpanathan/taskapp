@@ -1,2 +1,2 @@
 # taskapp
-ios app
+this is a task ios app created in swift
