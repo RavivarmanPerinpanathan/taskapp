@@ -24,22 +24,21 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TaskListSquare" id="j1p-R5-5Rb">
-                                <rect key="frame" x="0.0" y="0.0" width="166" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="166" height="120"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
+                        <cells/>
                         <connections>
                             <outlet property="dataSource" destination="Mgx-un-r48" id="CIm-6F-HNM"/>
                             <outlet property="delegate" destination="Mgx-un-r48" id="BCt-Ng-IwX"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="My Tasks" id="jzW-x7-uLd"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="My Tasks" id="jzW-x7-uLd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7hL-Wn-MOh">
+                            <connections>
+                                <segue destination="Gna-4s-ZjR" kind="presentation" id="Z3g-dq-6Bi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zy4-fC-jus" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,49 +52,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="N1v-10-GGh">
-                                <rect key="frame" x="16" y="58" width="343" height="202"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you want to do ?" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9M-4Q-TbX">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CBC-rb-uww">
-                                        <rect key="frame" x="0.0" y="30" width="343" height="172"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4Ic-ff-sfY">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="172"/>
-                                                <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write Here !!!" translatesAutoresizingMaskIntoConstraints="NO" id="dya-Q8-tMW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="172"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="textColor" red="0.98906573300177414" green="0.99844762152954036" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This is my title for my message !!!!!!I!!!!!!!!!!!!!!!!!!!!! three line" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4oO-dE-fHY">
+                                <rect key="frame" x="16" y="20" width="343" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Xr-ga-LMg">
+                                <rect key="frame" x="16" y="223" width="343" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRm-Bn-1kE">
+                                <rect key="frame" x="16" y="499" width="343" height="48"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V05-kP-xrj">
+                                <rect key="frame" x="16" y="555" width="343" height="48"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Cancel"/>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cZY-YT-LrQ">
+                                <rect key="frame" x="16" y="150" width="343" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WO4-da-kQp">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" id="4F5-Q4-kHh">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="27" bottom="8" right="8"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSI-2k-8w1">
+                                <rect key="frame" x="313" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <state key="normal" title="!"/>
+                            </button>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8rC-Eb-nLg">
+                                <rect key="frame" x="0.0" y="408" width="375" height="51"/>
+                                <date key="date" timeIntervalSinceReferenceDate="544009637.55907094">
+                                    <!--2018-03-29 09:47:17 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="0.80655992032765744" green="0.94009098657863666" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Sam-AD-WKb" firstAttribute="trailing" secondItem="N1v-10-GGh" secondAttribute="trailing" constant="16" id="9na-04-Nhy"/>
-                            <constraint firstItem="CBC-rb-uww" firstAttribute="height" secondItem="kWZ-Dl-WMq" secondAttribute="height" id="FIJ-tj-JXl"/>
-                            <constraint firstItem="Sam-AD-WKb" firstAttribute="bottom" secondItem="N1v-10-GGh" secondAttribute="bottom" constant="407" id="Ldl-mF-g8A"/>
-                            <constraint firstItem="N1v-10-GGh" firstAttribute="leading" secondItem="Sam-AD-WKb" secondAttribute="leading" constant="16" id="QEw-O1-f5Z"/>
-                            <constraint firstItem="N1v-10-GGh" firstAttribute="top" secondItem="Sam-AD-WKb" secondAttribute="top" constant="38" id="mYx-Wf-M6C"/>
+                            <constraint firstItem="V05-kP-xrj" firstAttribute="top" secondItem="iRm-Bn-1kE" secondAttribute="bottom" constant="8" id="3B9-nB-dyp"/>
+                            <constraint firstItem="iRm-Bn-1kE" firstAttribute="top" secondItem="8rC-Eb-nLg" secondAttribute="bottom" constant="30" id="6aT-BU-0V4"/>
+                            <constraint firstItem="iRm-Bn-1kE" firstAttribute="top" secondItem="8rC-Eb-nLg" secondAttribute="bottom" constant="8" symbolic="YES" id="I3p-Jk-SpW"/>
+                            <constraint firstItem="Sam-AD-WKb" firstAttribute="bottom" secondItem="V05-kP-xrj" secondAttribute="bottom" constant="20" id="Q8Y-cs-B0G"/>
+                            <constraint firstItem="Sam-AD-WKb" firstAttribute="trailing" secondItem="iRm-Bn-1kE" secondAttribute="trailing" constant="16" id="T59-Ph-mY5"/>
+                            <constraint firstItem="V05-kP-xrj" firstAttribute="top" secondItem="iRm-Bn-1kE" secondAttribute="bottom" constant="8" symbolic="YES" id="slT-DW-hEl"/>
+                            <constraint firstItem="V05-kP-xrj" firstAttribute="leading" secondItem="Sam-AD-WKb" secondAttribute="leading" constant="16" id="us9-pZ-av6"/>
+                            <constraint firstItem="Sam-AD-WKb" firstAttribute="trailing" secondItem="V05-kP-xrj" secondAttribute="trailing" constant="16" id="vsX-v9-xUY"/>
+                            <constraint firstItem="iRm-Bn-1kE" firstAttribute="leading" secondItem="Sam-AD-WKb" secondAttribute="leading" constant="16" id="wGY-uH-kRx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sam-AD-WKb"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lwh-dB-QSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1453.5999999999999" y="-164.16791604197903"/>
+            <point key="canvasLocation" x="1536.8" y="290.10494752623691"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pWm-LX-Gck">
+            <objects>
+                <viewController id="Znh-b1-cXs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IkE-XQ-XKl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.80655992030000001" green="0.94009098660000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="n9m-hW-FTt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2v-PC-YBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537" y="-493"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lYX-5N-J5B">
